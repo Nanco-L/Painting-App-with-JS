@@ -9,10 +9,12 @@ const eraserBtn = document.querySelector(".eraser-btn");
 const fileInput = document.querySelector(".file-input");
 const textInput = document.querySelector(".text-input");
 const saveBtn = document.querySelector(".save-btn");
+const fontSizeRange = document.querySelector(".font-size");
 
 let isPainting = false;
 let isFilling = false;
 let isEraser = false;
+let fontSize = 48;
 
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
@@ -123,7 +125,7 @@ function onDoubleClick(event) {
     if (text !== "") {
         ctx.save();
         ctx.lineWidth = 1;
-        ctx.font = "48px Noto Sans KR"; //"48px serif";
+        ctx.font = `${fontSize}px Noto Sans KR`; //"48px serif";
         // ctx.strokeText(textInput.value, event.offsetX, event.offsetY);
         ctx.fillText(text, event.offsetX, event.offsetY);
         ctx.restore();
@@ -136,6 +138,10 @@ function onSaveClick() {
     a.href = url;
     a.download = "myDrawing.png";
     a.click();
+}
+
+function onFontSizeRangeChange(event) {
+    fontSize = event.target.value;
 }
 
 lineWidth.addEventListener("change", onLineWidthChange);
@@ -155,3 +161,4 @@ eraserBtn.addEventListener("click", onEraserClick);
 eraseAllBtn.addEventListener("click", onEraseAllClick);
 fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
+fontSizeRange.addEventListener("change", onFontSizeRangeChange);

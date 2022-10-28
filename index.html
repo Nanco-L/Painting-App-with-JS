@@ -71,7 +71,20 @@
                 max="10"
                 value="5"
                 step="0.25"
+                list="line-width-tickmarks"
             />
+            <datalist id="line-width-tickmarks">
+                <option value="1" label=" 1 "></option>
+                <option value="2" label=" 2 "></option>
+                <option value="3" label=" 3 "></option>
+                <option value="4" label=" 4 "></option>
+                <option value="5" label=" 5 "></option>
+                <option value="6" label=" 6 "></option>
+                <option value="7" label=" 7 "></option>
+                <option value="8" label=" 8 "></option>
+                <option value="9" label=" 9 "></option>
+                <option value="10" label="10 "></option>
+            </datalist>
             <button class="mode-btn">Fill</button>
             <button class="eraser-btn">Eraser</button>
             <button class="erase-all-btn">Erase All</button>
@@ -84,6 +97,23 @@
                     accept="image/*"
                 />
             </label>
+            <span class="font-size-text">Font Size</span>
+            <input
+                class="font-size"
+                type="range"
+                min="20"
+                max="60"
+                value="48"
+                step="1"
+                list="font-size-tickmarks"
+            />
+            <datalist id="font-size-tickmarks">
+                <option value="20" label="20"></option>
+                <option value="30" label="30"></option>
+                <option value="40" label="40"></option>
+                <option value="50" label="50"></option>
+                <option value="60" label="60"></option>
+            </datalist>
             <input
                 class="text-input"
                 type="text"

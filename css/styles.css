@@ -95,3 +95,11 @@ button:hover,
     text-align: center;
     font-weight: 500;
 }
+
+datalist {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* writing-mode: vertical-lr; */
+    width: 300px;
+}
